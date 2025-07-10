@@ -1,5 +1,5 @@
-create database bd_collaborax;
-use bd_collaborax;
+CREATE DATABASE bd_collaborax CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE bd_collaborax;
 
 create table archivos (
   id INT PRIMARY KEY AUTO_INCREMENT,
