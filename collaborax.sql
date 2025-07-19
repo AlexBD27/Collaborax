@@ -250,7 +250,7 @@ INSERT INTO modalidades (nombre, descripcion) VALUES
 ('Híbrida','Combinación presencial y virtual');
 
 INSERT INTO usuarios (correo, correo_personal, clave, rol_id, activo, en_linea, ultima_conexion, clave_mostrar, foto) VALUES
-('superadmin@collaborax.com', 'superadmin@gmail.com',  '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 1, 1, 1, NOW(), null, 1)
+('superadmin@collaborax.com', 'superadmin@gmail.com',  '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 1, 1, 1, NOW(), null, 1);
 
 INSERT INTO usuarios (correo, correo_personal, clave, rol_id, activo, en_linea, ultima_conexion, clave_mostrar, foto) VALUES
 ('admin1@empresa1.com',   'admin1.personal@gmail.com',   '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 2, 1, 0, NOW(), NULL, 1),
