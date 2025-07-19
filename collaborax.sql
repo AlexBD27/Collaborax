@@ -251,3 +251,47 @@ INSERT INTO modalidades (nombre, descripcion) VALUES
 
 INSERT INTO usuarios (correo, correo_personal, clave, rol_id, activo, en_linea, ultima_conexion, clave_mostrar, foto) VALUES
 ('superadmin@collaborax.com', 'superadmin@gmail.com',  '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 1, 1, 1, NOW(), null, 1)
+
+INSERT INTO usuarios (correo, correo_personal, clave, rol_id, activo, en_linea, ultima_conexion, clave_mostrar, foto) VALUES
+('admin1@empresa1.com',   'admin1.personal@gmail.com',   '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 2, 1, 0, NOW(), NULL, 1),
+('coordgen1@empresa1.com','coordgen1.personal@gmail.com','$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 3, 1, 0, NOW(), NULL, 1),
+('coordeq1@empresa1.com', 'coordeq1.personal@gmail.com', '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 4, 1, 0, NOW(), NULL, 1),
+('coordeq2@empresa1.com', 'coordeq2.personal@gmail.com', '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 4, 1, 0, NOW(), NULL, 1),
+('trab1@empresa1.com',    'trab1.personal@gmail.com',    '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 5, 1, 0, NOW(), NULL, 1),
+('trab2@empresa1.com',    'trab2.personal@gmail.com',    '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 5, 1, 0, NOW(), NULL, 1),
+('trab3@empresa1.com',    'trab3.personal@gmail.com',    '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 5, 1, 0, NOW(), NULL, 1);
+
+-- 2️⃣ Usuarios de Empresa 2
+INSERT INTO usuarios (correo, correo_personal, clave, rol_id, activo, en_linea, ultima_conexion, clave_mostrar, foto) VALUES
+('admin1@empresa2.com',   'admin1.personal2@gmail.com',   '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 2, 1, 0, NOW(), NULL, 2),
+('coordgen1@empresa2.com','coordgen1.personal2@gmail.com','$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 3, 1, 0, NOW(), NULL, 2),
+('coordeq1@empresa2.com', 'coordeq1.personal2@gmail.com', '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 4, 1, 0, NOW(), NULL, 2),
+('coordeq2@empresa2.com', 'coordeq2.personal2@gmail.com', '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 4, 1, 0, NOW(), NULL, 2),
+('trab1@empresa2.com',    'trab1.personal2@gmail.com',    '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 5, 1, 0, NOW(), NULL, 2),
+('trab2@empresa2.com',    'trab2.personal2@gmail.com',    '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 5, 1, 0, NOW(), NULL, 2),
+('trab3@empresa2.com',    'trab3.personal2@gmail.com',    '$2y$12$Uy6eT8rFWhLDfPkfY31MkORzDdfVXWX2icYKSrmRKUPQ2lK9gS.My', 5, 1, 0, NOW(), NULL, 2);
+
+-- 3️⃣ Empresas (vinculadas al usuario admin respectivo)
+INSERT INTO empresas (usuario_id, plan_servicio_id, nombre, descripcion, ruc, telefono) VALUES
+(2, 2, 'Empresa Innovadora S.A.C.', 'Consultoría y desarrollo de software', '20123456789', '999888777'),
+(9, 1, 'Empresa Soluciones EIRL', 'Servicios de soporte técnico', '20456789123', '988777666');
+
+-- 4️⃣ Trabajadores de Empresa 1 (Admin, coordinadores y colaboradores)
+INSERT INTO trabajadores (usuario_id, empresa_id, nombres, apellido_paterno, apellido_materno, doc_identidad, fecha_nacimiento, telefono) VALUES
+(2, 1, 'Ana', 'Pérez', 'García', '12345678', '1985-05-10', '999111222'),
+(3, 1, 'Luis', 'Ramírez', 'Lopez', '23456789', '1980-02-20', '988111333'),
+(4, 1, 'María', 'Díaz', 'Torres', '34567890', '1990-06-15', '977222333'),
+(5, 1, 'Pedro', 'Suárez', 'Martínez', '45678901', '1992-08-25', '966333444'),
+(6, 1, 'Carlos', 'Vera', 'Guzmán', '56789012', '1995-09-12', '955444555'),
+(7, 1, 'Lucía', 'Fernández', 'Cruz', '67890123', '1998-11-30', '944555666'),
+(8, 1, 'Jorge', 'Mendoza', 'Reyes', '78901234', '1996-03-03', '933666777');
+
+-- 5️⃣ Trabajadores de Empresa 2
+INSERT INTO trabajadores (usuario_id, empresa_id, nombres, apellido_paterno, apellido_materno, doc_identidad, fecha_nacimiento, telefono) VALUES
+(9, 2, 'Paula', 'Cruz', 'Reyes', '11223344', '1987-04-14', '922111222'),
+(10, 2, 'Miguel', 'Ortiz', 'Santos', '22334455', '1983-07-19', '911222333'),
+(11, 2, 'Diana', 'Vega', 'Salazar', '33445566', '1991-12-05', '900333444'),
+(12, 2, 'Oscar', 'Campos', 'Ruiz', '44556677', '1994-01-22', '899444555'),
+(13, 2, 'Sofía', 'Gómez', 'Paredes', '55667788', '1997-10-18', '888555666'),
+(14, 2, 'Renzo', 'Ponce', 'Zapata', '66778899', '1999-02-02', '877666777'),
+(15, 2, 'Brenda', 'Ríos', 'Silva', '77889900', '1995-05-09', '866777888');
